@@ -17,7 +17,7 @@ const Condition = ({Humid, Wind}) => {
               </div>
 
               <div className="data  ">
-                <p className='text-white text-xl '>{Humid} %</p>
+                <p className='text-white text-xl '>{Humid || "41"} % </p>
                 <p className='text-white text-xl '>Humidity</p>
               </div>
             </div>
@@ -30,7 +30,7 @@ const Condition = ({Humid, Wind}) => {
               </div>
 
               <div className="data">
-                <p className='text-white'>{Wind}  KM/H</p>
+                <p className='text-white'>{Wind || "4.2"}  KM/H </p>
                 <p className='text-white'>Wind Speed</p>
               </div>
             </div>
