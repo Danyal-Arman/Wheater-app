@@ -3,18 +3,15 @@ import { format } from 'date-fns';
 
 const Weather = (props) => {
   const get = props.city
-  console.log(get)
 
 
 
   const currentDate = new Date();
   const day = currentDate.getDate() // for day of the month 
   const month = format(currentDate, 'MMMM')
-  console.log()
 
 
 
-console.log("this is props ",props.condition)
 
   return (
     <div className='container '>

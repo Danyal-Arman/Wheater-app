@@ -117,8 +117,7 @@ const TopCitiesWeather = ({ countryCode }) => {
   const [citiesWeather, setCitiesWeather] = useState([])
   const country = countryCode
   const cities = topCities[country] || []
-  console.log("these are cities", cities)
-  console.log("this is country code", country)
+ 
 
 
 
@@ -132,7 +131,6 @@ const TopCitiesWeather = ({ countryCode }) => {
       for (const city of cities) {
         const fetchdata = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${import.meta.env.VITE_APP_ID}`)
         const res = await fetchdata.json()
-        console.log(res.weather[0].icon)
         results.push({
           city,
           temp: `${Math.round(res.main.temp - 273.15)}°C`,
@@ -141,14 +139,12 @@ const TopCitiesWeather = ({ countryCode }) => {
           res
         })
         const icons = allIcons[res.weather[0].icon]
-        console.log("this is icons ", icons)
       }
       setCitiesWeather(results)
     }
     fetchCitiesWeather()
 
   }, [countryCode])
-  console.log("this is citiesweather", citiesWeather)
 
 
   return (

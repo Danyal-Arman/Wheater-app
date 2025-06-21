@@ -4,8 +4,3 @@
         font-size: x-large;
     }
 }
-form{
-    @media (max-width: 400) {
-        /* margin-top: 40px; */
-    }
-}

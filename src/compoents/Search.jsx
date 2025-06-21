@@ -41,14 +41,12 @@ const Search = ({ setCities, setTemp, setIcon, setHumid, setWind, setCountry, se
       const fetchData = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${import.meta.env.VITE_APP_ID}`)
 
       const response = await fetchData.json()
-      console.log(response)
       if (response.cod === '404') {
         alert("Place not found: Enter a valid country or city name")
         setCity("")
       }
 
 
-      // console.log(response.main.temp)
       const celcius = Math.round(response.main.temp - 273.15)
       setTemp(celcius)
       const renderIcon = allIcons[response.weather[0].icon] || clear_icon

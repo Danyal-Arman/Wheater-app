@@ -1,4 +1,3 @@
-
 import './App.css'
 import Condition from './compoents/Condition';
 import Weather from './compoents/Weather'
@@ -70,9 +69,7 @@ function App() {
     navigator.geolocation.getCurrentPosition(
 
       (position) => {
-        console.log(position)
         fetchWeatherData({ lat: position.coords.latitude, lon: position.coords.longitude })
-        // console.log( fetchWeatherData({ lat: position.coords.latitude, lon: position.coords.longitude }))
       },
       (error) => {
         console.error("Not able to get the location:", error)
@@ -82,7 +79,6 @@ function App() {
 
 
 
- console.log("this is country",country)
   return (
       <>
     <div className=" md:my-4 min-h-screen  md:overflow-y-auto max-w-3xl mx-auto border-2 sm:rounded-2xl border-red-200 bg-gradient-to-b from-gray-300 via-gray-500  to-gray-800">

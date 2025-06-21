@@ -1,4 +1,3 @@
-import React from 'react'
 import wind_icon from '../Assets/wind.png'
 import humidity_icon from '../Assets/humidity.png'
 import './Condition.css'
