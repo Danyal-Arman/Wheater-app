@@ -1,0 +1,12 @@
+.img{
+    @media (min-width: 320px) {
+        width: 15rem;
+    }
+}
+.img{
+    @media (min-width: 400px) {
+        width: 15rem;
+    }
+}
+
+
